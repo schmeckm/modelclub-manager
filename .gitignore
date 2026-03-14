@@ -1,8 +1,13 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# =========================
+# Node
+# =========================
+node_modules/
+**/node_modules/
 
-# dependencies
-/node_modules
-/.pnp
+# =========================
+# Yarn / PNP
+# =========================
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -10,32 +15,72 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
+# =========================
+# Build / Dist
+# =========================
+dist/
+build/
+.next/
+out/
 
-# next.js
-/.next/
-/out/
+# =========================
+# Coverage / Testing
+# =========================
+coverage/
 
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# =========================
+# Logs
+# =========================
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# =========================
+# Environment
+# =========================
+.env
+.env.*
+!.env.example
 
-# vercel
+# =========================
+# Vercel
+# =========================
 .vercel
 
-# typescript
+# =========================
+# TypeScript
+# =========================
 *.tsbuildinfo
 next-env.d.ts
+
+# =========================
+# Prisma
+# =========================
+src/generated/prisma
+prisma/migrations/.lock
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Editor
+# =========================
+.vscode/
+.idea/
+.history/
+
+# =========================
+# Security
+# =========================
+*.pem
+
+# =========================
+# Docker
+# =========================
+docker-data/
